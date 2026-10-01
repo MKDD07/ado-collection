@@ -1911,6 +1911,36 @@ function googleTranslateElementInit() {
 
 }
 
+        /* Ensure PDP Booking Sidebar Card stays on top of everything including sticky headers & overlay drawers */
+        .pdp-sidebar-wrapper {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 100px !important;
+            z-index: 99999 !important;
+        }
+
+        .pdp-booking-sidebar,
+        .pdp-booking-sidebar.pdp-request-inquiry-card {
+            position: relative;
+            z-index: 99999 !important;
+        }
+
+        .pdp-inquiry-backdrop {
+            z-index: 99998 !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .pdp-booking-sidebar,
+            .pdp-booking-sidebar.pdp-request-inquiry-card {
+                position: fixed !important;
+                z-index: 99999 !important;
+            }
+            body.pdp-inquiry-modal-open .pdp-booking-sidebar,
+            body.pdp-inquiry-modal-open .pdp-booking-sidebar.pdp-request-inquiry-card {
+                z-index: 99999 !important;
+            }
+        }
+
 </style>
 
 
