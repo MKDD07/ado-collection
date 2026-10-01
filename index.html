@@ -649,7 +649,21 @@ function googleTranslateElementInit() {
 
 
 
-   @media (max-width: 768px) {
+   @media (max-width: 991px) {
+  .pdp-footer-main-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .pdp-f-split-subgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdp-f-split-subgrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
 
 
@@ -2588,6 +2602,15 @@ function googleTranslateElementInit() {
         Real experiences and feedback from verified travellers.
       </p>
     </div>
+    <!-- Swiper Controls for Reviews -->
+    <div class="pdp-swiper-controls align-items-center gap-2 d-none d-md-flex">
+      <button class="pdp-swiper-nav-btn" id="guestReviewsPrev" aria-label="Previous review">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="pdp-swiper-nav-btn" id="guestReviewsNext" aria-label="Next review">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
   </div>
 
   <div class="guest-feedback-wrap">
@@ -2621,126 +2644,129 @@ function googleTranslateElementInit() {
     </div>
 
 
-    <!-- Reviews -->
-    <div class="guest-feedback-list">
+    <!-- Reviews Swiper -->
+    <div class="swiper guest-feedback-swiper">
+      <div class="swiper-wrapper guest-feedback-list">
 
-      <article class="guest-feedback-card">
+        <article class="swiper-slide guest-feedback-card">
 
-        <div class="guest-feedback-card-head">
+          <div class="guest-feedback-card-head">
 
-          <div class="guest-feedback-author">
-            <div class="guest-feedback-avatar">S</div>
+            <div class="guest-feedback-author">
+              <div class="guest-feedback-avatar">S</div>
 
-            <div class="guest-feedback-person">
-              <h5>Swaraj Patil</h5>
-              <span>Stayed 9 days ago</span>
+              <div class="guest-feedback-person">
+                <h5>Swaraj Patil</h5>
+                <span>Stayed 9 days ago</span>
+              </div>
             </div>
-          </div>
 
-          <div class="guest-feedback-rating">
-            <i class="fa-solid fa-star"></i>
-            <span>5.0</span>
-          </div>
-
-        </div>
-
-        <p class="guest-feedback-text">
-          We had a wonderful stay at Kensho Villa and genuinely enjoyed our
-          experience. Rafel, our caretaker, did a fantastic job throughout our
-          stay. From delicious food to daily chores, his hospitality really
-          stood out. Manager Mohamad gave us great recommendations to explore
-          South Goa!
-        </p>
-
-      </article>
-
-
-      <article class="guest-feedback-card">
-
-        <div class="guest-feedback-card-head">
-
-          <div class="guest-feedback-author">
-            <div class="guest-feedback-avatar">Z</div>
-
-            <div class="guest-feedback-person">
-              <h5>Zaid Shikalgar</h5>
-              <span>Stayed 2 weeks ago</span>
+            <div class="guest-feedback-rating">
+              <i class="fa-solid fa-star"></i>
+              <span>5.0</span>
             </div>
+
           </div>
 
-          <div class="guest-feedback-rating">
-            <i class="fa-solid fa-star"></i>
-            <span>5.0</span>
-          </div>
+          <p class="guest-feedback-text">
+            We had a wonderful stay at Kensho Villa and genuinely enjoyed our
+            experience. Rafel, our caretaker, did a fantastic job throughout our
+            stay. From delicious food to daily chores, his hospitality really
+            stood out. Manager Mohamad gave us great recommendations to explore
+            South Goa!
+          </p>
 
-        </div>
-
-        <p class="guest-feedback-text">
-          Excellent service and wonderful hospitality! The villa was beautiful,
-          clean, and peaceful. Staff went above and beyond to ensure our comfort.
-          Highly recommend Kensho Villas!
-        </p>
-
-      </article>
+        </article>
 
 
-      <article class="guest-feedback-card">
+        <article class="swiper-slide guest-feedback-card">
 
-        <div class="guest-feedback-card-head">
+          <div class="guest-feedback-card-head">
 
-          <div class="guest-feedback-author">
-            <div class="guest-feedback-avatar">K</div>
+            <div class="guest-feedback-author">
+              <div class="guest-feedback-avatar">Z</div>
 
-            <div class="guest-feedback-person">
-              <h5>Khyati Kanani</h5>
-              <span>Stayed 1 month ago</span>
+              <div class="guest-feedback-person">
+                <h5>Zaid Shikalgar</h5>
+                <span>Stayed 2 weeks ago</span>
+              </div>
             </div>
-          </div>
 
-          <div class="guest-feedback-rating">
-            <i class="fa-solid fa-star"></i>
-            <span>5.0</span>
-          </div>
-
-        </div>
-
-        <p class="guest-feedback-text">
-          A wonderful experience from start to finish. The rooms were spotless,
-          comfortable, and very well maintained, making it ideal for a relaxing
-          family trip. Great location, quiet ambiance, and top-tier hospitality.
-        </p>
-
-      </article>
-
-
-      <article class="guest-feedback-card">
-
-        <div class="guest-feedback-card-head">
-
-          <div class="guest-feedback-author">
-            <div class="guest-feedback-avatar">M</div>
-
-            <div class="guest-feedback-person">
-              <h5>Meera Patel</h5>
-              <span>Stayed 1 month ago</span>
+            <div class="guest-feedback-rating">
+              <i class="fa-solid fa-star"></i>
+              <span>5.0</span>
             </div>
+
           </div>
 
-          <div class="guest-feedback-rating">
-            <i class="fa-solid fa-star"></i>
-            <span>5.0</span>
+          <p class="guest-feedback-text">
+            Excellent service and wonderful hospitality! The villa was beautiful,
+            clean, and peaceful. Staff went above and beyond to ensure our comfort.
+            Highly recommend Kensho Villas!
+          </p>
+
+        </article>
+
+
+        <article class="swiper-slide guest-feedback-card">
+
+          <div class="guest-feedback-card-head">
+
+            <div class="guest-feedback-author">
+              <div class="guest-feedback-avatar">K</div>
+
+              <div class="guest-feedback-person">
+                <h5>Khyati Kanani</h5>
+                <span>Stayed 1 month ago</span>
+              </div>
+            </div>
+
+            <div class="guest-feedback-rating">
+              <i class="fa-solid fa-star"></i>
+              <span>5.0</span>
+            </div>
+
           </div>
 
-        </div>
+          <p class="guest-feedback-text">
+            A wonderful experience from start to finish. The rooms were spotless,
+            comfortable, and very well maintained, making it ideal for a relaxing
+            family trip. Great location, quiet ambiance, and top-tier hospitality.
+          </p>
 
-        <p class="guest-feedback-text">
-          Had a memorable and hassle-free holiday. The service quality is
-          outstanding, and the overall vibe is peaceful and family-friendly.
-          Everything from the location to the staff service was a solid 5/5.
-        </p>
+        </article>
 
-      </article>
 
+        <article class="swiper-slide guest-feedback-card">
+
+          <div class="guest-feedback-card-head">
+
+            <div class="guest-feedback-author">
+              <div class="guest-feedback-avatar">M</div>
+
+              <div class="guest-feedback-person">
+                <h5>Meera Patel</h5>
+                <span>Stayed 1 month ago</span>
+              </div>
+            </div>
+
+            <div class="guest-feedback-rating">
+              <i class="fa-solid fa-star"></i>
+              <span>5.0</span>
+            </div>
+
+          </div>
+
+          <p class="guest-feedback-text">
+            Had a memorable and hassle-free holiday. The service quality is
+            outstanding, and the overall vibe is peaceful and family-friendly.
+            Everything from the location to the staff service was a solid 5/5.
+          </p>
+
+        </article>
+
+      </div>
+      <div class="swiper-pagination pdp-reviews-pagination d-md-none mt-3"></div>
     </div>
 
   </div>
@@ -5052,7 +5078,7 @@ if (!landingUrl) {
      PDP SEO FOOTER EXPLORATION & DIRECTORY LINKS SECTION
 ========================================== -->
 <section class="pdp-seo-directory-section" id="pdpSeoDirectory">
-  <div class="container">
+  <div class="container-fluid">
   
 
     <!-- Main Locations Directory (Villas by Region & Cities) -->
@@ -5214,840 +5240,1488 @@ if (!landingUrl) {
         </div>
       </div>
     </div>
-
-
-
   </div>
 </section>
+
+<!-- Redesigned Luxury Newsletter Section -->
 <div class="cs_newsletter_1_wrap">
+  <div class="container-fluid">
+    <div class="pdp-luxury-newsletter-card">
 
-  <div class="container">
-
-
-
-    <div class="cs_newsletter cs_style_1 cs_accent_bg">
-
-      <div class="row align-items-center">
-
-        <div class="col-lg-1">
-
-          <div class="cs_newsletter_icon">
-
-            <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/envlop.webp" loading="lazy" alt="Envelope" title="Envelope">
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <p style="font-size: 20px; visibility: visible; animation-name: fadeInLeft;" class="cs_newsletter_title cs_fs_40 cs_bold mb-0 cs_white_color wow fadeInLeft">Sign Up Now<br><span>Get
-
-              Access to Exclusive Offers &amp; Updates</span></p>
-
-        </div>
-
-        <div class="col-lg-5">
-
-          <div class="cs_newsletter_form">
-
-            <input type="email" name="nlemail" id="nlemail" class="cs_newsletter_form_field" placeholder="Enter your email address ...">
-
-
-
-            <button id="nlsubmit" class="cs_btn cs_style_1 cs_fs_18 cs_medium">
-
-              Subscribe<svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                <path d="M19.5866 5.69629H0.41235C0.184269 5.69629 0 5.46776 0 5.1849C0 4.90204 0.184269 4.67352 0.41235 4.67352H18.5906L16.0881 1.57004C15.927 1.37028 15.927 1.04587 16.0881 0.846109C16.2492 0.646349 16.5108 0.646349 16.6718 0.846109L19.8792 4.82374C19.9977 4.97076 20.0325 5.1897 19.9681 5.38147C19.9036 5.57164 19.7529 5.69629 19.5866 5.69629Z" fill="currentColor"></path>
-
-                <path d="M16.3435 9.11986C16.2384 9.11986 16.1333 9.08012 16.0538 8.99935C15.8935 8.83909 15.8935 8.57884 16.0538 8.41858L19.2487 5.22371C19.4089 5.06345 19.6692 5.06345 19.8294 5.22371C19.9897 5.38396 19.9897 5.64422 19.8294 5.80448L16.6346 8.99935C16.5538 9.08012 16.4487 9.11986 16.3435 9.11986Z" fill="currentColor"></path>
-
-              </svg>
-
-            </button>
-
-            <!-- <div class="success2" style="display: none; color: #ec0024; font-weight: bold; text-align: center;     font-size: 10px;"></div> -->
-
-          </div><br>
-
-          <p class="content-form nlmsg" style="display:none;"></p>
-
-        </div>
-
+      <!-- Desktop (992+): Pexels image right half with gradient overlay -->
+      <div class="pdp-nl-img-panel" aria-hidden="true">
+        <img
+          src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=900&q=80"
+          alt=""
+          class="pdp-nl-img"
+          loading="lazy"
+        >
+        <div class="pdp-nl-img-fade"></div>
       </div>
 
+      <!-- Content row -->
+      <div class="row align-items-center pdp-nl-row">
 
+        <!-- Left: copy -->
+        <div class="col-sm-6 col-12 pdp-nl-left">
+          <h3 class="pdp-nl-title">Exclusive Escapes.<br>Only for You.</h3>
+          <p class="pdp-nl-subtitle">Private villa drops &amp; member-only rates — curated for discerning travelers.</p>
+        </div>
 
+        <!-- Right: form -->
+        <div class="col-sm-6 col-12 pdp-nl-right">
+          <div class="pdp-nl-form-wrapper">
+            <div class="pdp-nl-input-group">
+              <span class="pdp-nl-input-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <input type="email" name="nlemail" id="nlemail" class="pdp-nl-input" placeholder="Your email address" required autocomplete="email">
+              <button id="nlsubmit" type="button" class="pdp-nl-btn">
+                <span>Subscribe</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            <p class="content-form nlmsg" style="display:none;"></p>
+            <div class="pdp-nl-privacy-note">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>No spam. Unsubscribe anytime.</span>
+            </div>
+          </div>
+        </div>
 
-
+      </div><!-- /row -->
     </div>
-
   </div>
-
 </div>
 
+<style>
+/* ── Newsletter: Yellow Gradient ── */
+.cs_newsletter_1_wrap {
+  padding: 32px 0 16px;
+  background: transparent;
+}
 
+.pdp-luxury-newsletter-card {
+  background:#ffe400;
+  border-radius: 24px;
+  padding: 42px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(250, 204, 21, 0.30), 0 2px 0 rgba(255,255,255,0.5) inset;
+}
+
+/* Right image panel (992+) */
+.pdp-nl-img-panel {
+  display: none;
+  position: absolute;
+  top: 0; right: 0;
+  width: 46%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.pdp-nl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+  border-radius: 0 24px 24px 0;
+}
+.pdp-nl-img-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFE400 6.4%, rgba(255, 228, 0, 0) 100%);
+  border-radius: 0 24px 24px 0;
+}
+
+@media (min-width: 992px) {
+  .pdp-nl-img-panel { display: block; }
+}
+
+/* Row layout */
+.pdp-nl-row {
+  position: relative;
+  z-index: 2;
+  gap: 24px 0;
+}
+.pdp-nl-left { padding-right: 24px; }
+.pdp-nl-right { padding-left: 0; }
+
+/* Badge */
+.pdp-nl-vip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.18);
+  color: #1a0f00;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  padding: 5px 13px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* Title */
+.pdp-nl-title {
+  color: #1a0f00;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  letter-spacing: -0.4px;
+}
+
+/* Subtitle */
+.pdp-nl-subtitle {
+  color: rgba(26,15,0,0.65);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 0;
+  max-width: 360px;
+}
+
+/* Form wrapper */
+.pdp-nl-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input group pill */
+.pdp-nl-input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.78);
+  border: 1.5px solid rgba(255,255,255,0.95);
+  border-radius: 60px;
+  padding: 6px 6px 6px 16px;
+  transition: box-shadow 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+}
+.pdp-nl-input-group:focus-within {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.10), 0 2px 10px rgba(0,0,0,0.12);
+}
+.pdp-nl-input-icon {
+  color: #92400e;
+  display: flex;
+  align-items: center;
+  margin-right: 9px;
+  flex-shrink: 0;
+}
+.pdp-nl-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #1a0f00;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 0;
+}
+.pdp-nl-input::placeholder {
+  color: #92400e;
+  opacity: 0.6;
+}
+.pdp-nl-btn {
+  background: #1a0f00;
+  color: #ffe400;
+  border: none;
+  border-radius: 50px;
+  padding: 11px 22px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.pdp-nl-btn:hover {
+  background: #0a0600;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.pdp-nl-btn:active { transform: translateY(0); }
+
+/* Privacy note */
+.pdp-nl-privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(26,15,0,0.55);
+  font-size: 11.5px;
+  padding-left: 8px;
+}
+.pdp-nl-privacy-note svg { color: rgba(26,15,0,0.45); }
+
+/* nlmsg */
+.nlmsg {
+  margin: 4px 0 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.nlmsg.success,
+.nlmsg:not([style*="display: none"]):not([style*="display:none"]) {
+  background: rgba(34, 197, 94, 0.20);
+  color: #14532d;
+  border: 1px solid rgba(34,197,94,0.35);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .pdp-luxury-newsletter-card { padding: 36px 28px; border-radius: 20px; }
+  .pdp-nl-title { font-size: 22px; }
+  .pdp-nl-left { padding-right: 16px; }
+}
+@media (max-width: 575px) {
+  .pdp-luxury-newsletter-card { padding: 28px 18px; border-radius: 16px; }
+  .pdp-nl-title { font-size: 20px; }
+  .pdp-nl-left { padding-right: 0; }
+  .pdp-nl-input-group {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 12px;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .pdp-nl-input-icon { display: none; }
+  .pdp-nl-input { text-align: center; padding: 4px 0; }
+  .pdp-nl-btn { width: 100%; justify-content: center; }
+  .pdp-nl-privacy-note { justify-content: center; padding-left: 0; text-align: center; }
+}
+</style>
 
 
 <!-- Start Support Section -->
-
-
-
 <!-- End Support Section -->
 
-<footer class="cs_footer cs_style_1 cs_white_color cs_bg_filed cs_primary_bg">
-
-  <!--  <div class="cs_newsletter_1_wrap">
-
-        <div class="container-fluid" style="max-width: 1600px">
-
-          <div class="cs_newsletter cs_style_1 cs_accent_bg">
-
-            <div class="cs_newsletter_icon"><img src="assets/images/icons/envlop.png" alt="Icon"></div>
-
-            <h2 class="cs_newsletter_title cs_fs_40 cs_bold mb-0 cs_white_color wow fadeInLeft">Subscribe Our Newsletter</h2>
-
-            <form action="#" class="cs_newsletter_form">
-
-              <input type="text" class="cs_newsletter_form_field" placeholder="Enter your email address ...">
-
-              <button type="submit" class="cs_btn cs_style_1 cs_fs_18 cs_medium">
-
-                Subscribe<svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5866 5.69629H0.41235C0.184269 5.69629 0 5.46776 0 5.1849C0 4.90204 0.184269 4.67352 0.41235 4.67352H18.5906L16.0881 1.57004C15.927 1.37028 15.927 1.04587 16.0881 0.846109C16.2492 0.646349 16.5108 0.646349 16.6718 0.846109L19.8792 4.82374C19.9977 4.97076 20.0325 5.1897 19.9681 5.38147C19.9036 5.57164 19.7529 5.69629 19.5866 5.69629Z" fill="currentColor"></path>
-
-                  <path d="M16.3435 9.11986C16.2384 9.11986 16.1333 9.08012 16.0538 8.99935C15.8935 8.83909 15.8935 8.57884 16.0538 8.41858L19.2487 5.22371C19.4089 5.06345 19.6692 5.06345 19.8294 5.22371C19.9897 5.38396 19.9897 5.64422 19.8294 5.80448L16.6346 8.99935C16.5538 9.08012 16.4487 9.11986 16.3435 9.11986Z" fill="currentColor"></path>
-
-                </svg>                
-
-              </button>
-
-            </form>
-
+<!-- Standalone Minimal Luxury Highlights Section (Above Footer) -->
+<section class="pdp-minimal-highlights-section">
+  <div class="container-fluid">
+    <div class="swiper pdp-minimal-highlights-swiper">
+      <div class="swiper-wrapper pdp-minimal-highlights-grid">
+        <!-- Highlight 1: Handpicked Luxury (Diamond / Gem Stroke) -->
+        <div class="swiper-slide pdp-min-highlight-card">
+          <div class="pdp-min-h-icon-box">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 12L2 9z"></path>
+              <path d="M11 3 8 9l4 12 4-12-3-6"></path>
+              <path d="M2 9h20"></path>
+            </svg>
           </div>
-
+          <div class="pdp-min-h-content">
+            <h4 class="pdp-min-h-title">Handpicked Luxury</h4>
+            <p class="pdp-min-h-desc">Verified villas &amp; serviced residences</p>
+          </div>
         </div>
 
-      </div> -->
-
-  <div class="container">
-
-    <div class="cs_footer_main">
-
-      <div class="cs_footer_main_col">
-
-        <div class="cs_footer_widget">
-
-          <div class="cs_text_widget">
-
-            <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/white-logo.webp" alt="Logo" title="Logo" loading="lazy">
-
+        <!-- Highlight 2: 24/7 Dedicated Concierge (Headset Stroke) -->
+        <div class="swiper-slide pdp-min-highlight-card">
+          <div class="pdp-min-h-icon-box">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              <path d="M19 16v3"></path>
+            </svg>
           </div>
+          <div class="pdp-min-h-content">
+            <h4 class="pdp-min-h-title">24/7 Dedicated Concierge</h4>
+            <p class="pdp-min-h-desc">On-demand guest support &amp; chef services</p>
+          </div>
+        </div>
 
-          <ul class="cs_contact_widget mb-0">
+        <!-- Highlight 3: Best Rate Assurance (Shield Check Stroke) -->
+        <div class="swiper-slide pdp-min-highlight-card">
+          <div class="pdp-min-h-icon-box">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <div class="pdp-min-h-content">
+            <h4 class="pdp-min-h-title">Best Rate Assurance</h4>
+            <p class="pdp-min-h-desc">Direct bookings &amp; zero hidden markups</p>
+          </div>
+        </div>
 
-            <li>
+        <!-- Highlight 4: 4.9+ Guest Ratings (Star Badge Stroke) -->
+        <div class="swiper-slide pdp-min-highlight-card">
+          <div class="pdp-min-h-icon-box">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="pdp-min-h-content">
+            <h4 class="pdp-min-h-title">4.9+ Guest Ratings</h4>
+            <p class="pdp-min-h-desc">Trusted by 50,000+ happy travelers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<footer class="cs_footer pdp-light-minimal-footer">
+  <!-- Watermark Logo Overlay for Desktop (Bottom Left Corner) -->
+   <div class="container-fluid absolute bottom-0 left-0">
+    <div class="relative">
+     <div class="pdp-footer-watermark-overlay ">
+       <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/logo.webp" alt="Adopremium Watermark" loading="lazy">
+     </div>
+   </div></div>
+  <div class="container-fluid">
+    <div class="pdp-footer-main-layout">
+      
+      <!-- Col 1: Brand & Bio -->
+      <div class="pdp-f-col pdp-f-brand-col">
+        <div class="pdp-f-logo-wrap">
+          <a href="https://www.adopremium.com/">
+            <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/logo.webp" alt="Adopremium Luxury Stays" title="Adopremium" loading="lazy">
+          </a>
+        </div>
+        <p class="pdp-f-bio">
+          Experience elevated hospitality with fully furnished serviced residences and bespoke luxury villas across key destination hubs.
+        </p>
+        
+        <div class="pdp-f-social-row">
+          <a href="https://www.instagram.com/adopremium_/" target="_blank" rel="noopener" aria-label="Instagram" class="pdp-f-social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61590614009988" target="_blank" rel="noopener" aria-label="Facebook" class="pdp-f-social-link">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/adopremium/" target="_blank" rel="noopener" aria-label="LinkedIn" class="pdp-f-social-link">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
 
+        <!-- Adotrip Hotel Ticket Badge Minimal Style -->
+        <a href="https://www.adotrip.com/#hotels" class="pdp-hotel-ticket-clean" target="_blank" rel="noopener">
+          <div class="pdp-ht-icon">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="pdp-ht-info">
+            <span class="pdp-ht-tag">Global Hospitality Partner</span>
+            <span class="pdp-ht-title">Explore Luxury Hotels Worldwide</span>
+          </div>
+          <div class="pdp-ht-arrow">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </a>
+      </div>
 
-              <!--  <p class="cs_fs_20">About us</p> -->
+      <!-- Col 2: Company Links -->
+      <div class="pdp-f-col pdp-f-accordion-col">
+        <div class="pdp-f-col-header">
+          <h4 class="pdp-f-col-title">Company</h4>
+          <i class="fa-solid fa-chevron-down pdp-f-chevron"></i>
+        </div>
+        <div class="pdp-f-col-collapse">
+          <ul class="pdp-f-links-list">
+            <li><a href="https://www.adopremium.com/">Home</a></li>
+            <li><a href="https://www.adopremium.com/about-us">About Us</a></li>
+            <li><a href="https://www.adopremium.com/locations">City Residences</a></li>
+            <li><a href="https://www.adopremium.com/villa-locations">Villa Escapes</a></li>
+            <li><a href="https://www.adopremium.com/blog">Journal &amp; Stories</a></li>
+            <li><a href="https://www.adopremium.com/careers">Careers</a></li>
+            <li><a href="https://www.adopremium.com/contact-us">Contact Support</a></li>
+            <li><a href="https://www.adopremium.com/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://www.adopremium.com/terms-conditions">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
 
-              <p>Experience Luxury, Convenience and Reliable Serviced Apartments Across Key Locations</p>
+      <!-- Col 3: Destinations -->
+      <div class="pdp-f-col pdp-f-accordion-col">
+        <div class="pdp-f-col-header">
+          <h4 class="pdp-f-col-title">Destinations</h4>
+          <i class="fa-solid fa-chevron-down pdp-f-chevron"></i>
+        </div>
+        <div class="pdp-f-col-collapse">
+          <div class="pdp-f-dest-grid">
+            <div class="pdp-f-dest-group">
+              <span class="pdp-f-dest-cat">India</span>
+              <ul class="pdp-f-pills">
+                <li><a href="https://www.adopremium.com/locations/delhi-ncr">Delhi NCR</a></li>
+                <li><a href="https://www.adopremium.com/locations/gurgaon">Gurugram</a></li>
+                <li><a href="https://www.adopremium.com/locations/noida">Noida</a></li>
+                <li><a href="https://www.adopremium.com/locations/mumbai">Mumbai</a></li>
+                <li><a href="https://www.adopremium.com/locations/pune">Pune</a></li>
+                <li><a href="https://www.adopremium.com/locations/hyderabad">Hyderabad</a></li>
+                <li><a href="https://www.adopremium.com/locations/bangalore">Bengaluru</a></li>
+                <li><a href="https://www.adopremium.com/locations/chennai">Chennai</a></li>
+              </ul>
+            </div>
+            <div class="pdp-f-dest-group" style="margin-top: 14px;">
+              <span class="pdp-f-dest-cat">International</span>
+              <ul class="pdp-f-pills">
+                <li><a href="https://www.adopremium.com/locations/london">London</a></li>
+                <li><a href="https://www.adopremium.com/locations/dubai">Dubai</a></li>
+                <li><a href="https://www.adopremium.com/locations/singapore">Singapore</a></li>
+                <li><a href="https://www.adopremium.com/locations/japan">Japan</a></li>
+                <li><a href="https://www.adopremium.com/locations/philippines">Philippines</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            </li>
-
-            <!-- <li>
-
-                  <p>Mail Us</p>
-
-                  <p class="cs_fs_20">hello@adopremium.com</p>
-
-                </li> -->
-
-            <li>
-
-              <p>Follow Us</p>
-
-              <div class="cs_social_btn cs_style_1 d-flex">
-
-                <a href="https://www.linkedin.com/company/adopremium/" target="_blank" class="cs_center" aria-label="linkedin"><i class="fa-brands fa-linkedin-in"></i>
-
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=61590614009988" target="_blank" class="cs_center" aria-label="linkedin"><i class="fa-brands fa-facebook"></i>
-
-                </a>
-
-                <!--<a href="javascript:;" target="_blank" class="cs_center" aria-label="twitter">
-
-                  <i class="fa-brands fa-x-twitter"></i>
-
-                </a>
-
-                <a href="javascript:;" target="_blank" class="cs_center" aria-label="youtube"><i
-
-                    class="fa-brands fa-youtube"></i>
-
-                </a>--> 
-
-                <a href="https://www.instagram.com/adopremium_/" target="_blank" class="cs_center" aria-label="slack">
-
-                  <i class="fa-brands fa-instagram"></i></a>
-
-              </div>
-
-            </li>
-
+      <!-- Col 3: Concierge Desk (Accordion on Mobile) -->
+      <div class="pdp-f-col pdp-f-contact-col pdp-f-accordion-col">
+        <div class="pdp-f-col-header">
+          <h4 class="pdp-f-col-title">Concierge Desk</h4>
+          <i class="fa-solid fa-chevron-down pdp-f-chevron"></i>
+        </div>
+        <div class="pdp-f-col-collapse">
+          <div class="pdp-f-contact-items">
             
-
-             <style>
-
-              .hotel-ticket-badge {
-
-                margin-top: 30px;
-
-                position: relative;
-
-                display: flex;
-
-                align-items: center;
-
-                justify-content: space-between;
-
-                gap: 5px;
-
-                width: 360px;
-
-                max-width: 100%;
-
-                padding: 11px 21px;
-
-                background: linear-gradient(135deg, #111111, #1b1b1b);
-
-                border-radius: 22px;
-
-                overflow: hidden;
-
-                text-decoration: none;
-
-                color: #fff;
-
-                border: 2px dashed rgb(255 193 7 / 61%);
-
-                box-shadow:
-
-                  0 15px 40px rgba(0, 0, 0, 0.35),
-
-                  inset 0 0 25px rgba(255, 193, 7, 0.08);
-
-                transition: .5s ease;
-
-                font-family: 'Montserrat', sans-serif;
-
-              }
-
-
-
-              /* Ticket holes */
-
-              .hotel-ticket-badge::before,
-
-              .hotel-ticket-badge::after {
-
-                content: "";
-
-                position: absolute;
-
-                width: 34px;
-
-                height: 34px;
-
-                background: #fff;
-
-                border-radius: 50%;
-
-                top: 50%;
-
-                transform: translateY(-50%);
-
-                z-index: 2;
-
-              }
-
-
-
-              .hotel-ticket-badge::before {
-
-                left: -17px;
-
-              }
-
-
-
-              .hotel-ticket-badge::after {
-
-                right: -17px;
-
-              }
-
-
-
-              /* Glow */
-
-              .hotel-ticket-glow {
-
-                position: absolute;
-
-                width: 180px;
-
-                height: 180px;
-
-                background: rgba(255, 193, 7, 0.18);
-
-                border-radius: 50%;
-
-                top: -80px;
-
-                right: -60px;
-
-                filter: blur(10px);
-
-              }
-
-
-
-              .hotel-ticket-left {
-
-                display: flex;
-
-                align-items: center;
-
-                gap: 16px;
-
-                position: relative;
-
-                z-index: 3;
-
-              }
-
-
-
-              .hotel-ticket-icon {
-
-
-
-                padding: 10px;
-
-                border-radius: 13px;
-
-                background: linear-gradient(135deg, #ffd54f, #ff9800);
-
-                display: flex;
-
-                align-items: center;
-
-                justify-content: center;
-
-                font-size: 30px;
-
-                color: #111;
-
-                box-shadow:
-
-                  0 8px 20px rgba(255, 193, 7, 0.4),
-
-                  inset 0 2px 8px rgba(255, 255, 255, 0.3);
-
-
-
-                transition: .5s ease;
-
-              }
-
-
-
-              .hotel-ticket-content h3 {
-
-                margin: 0;
-
-                font-size: 19px;
-
-                font-weight: 600;
-
-                letter-spacing: 0.5px;
-
-              }
-
-
-
-              .hotel-ticket-content p {
-
-                margin: 5px 0 0;
-
-                color: #d5d5d5;
-
-                font-size: 13px;
-
-                line-height: 1.4;
-
-              }
-
-
-
-              .hotel-ticket-right {
-
-                position: relative;
-
-                z-index: 3;
-
-                text-align: center;
-
-              }
-
-
-
-              .hotel-ticket-price {
-
-                font-size: 13px;
-
-                color: #ccc;
-
-                margin-bottom: 4px;
-
-                text-transform: uppercase;
-
-                letter-spacing: 1px;
-
-              }
-
-
-
-              .hotel-ticket-btn {
-
-                background: linear-gradient(135deg, #ffc107, #ff9800);
-
-                color: #111;
-
-                font-weight: 700;
-
-                padding: 10px 16px;
-
-                border-radius: 12px;
-
-                font-size: 14px;
-
-                display: inline-flex;
-
-                align-items: center;
-
-                gap: 8px;
-
-                box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
-
-              }
-
-
-
-              .hotel-ticket-badge:hover {
-
-                transform: translateY(-6px) scale(1.02);
-
-                border-color: #ffc107;
-
-                box-shadow:
-
-                  0 18px 45px rgba(0, 0, 0, 0.45),
-
-                  0 0 25px rgba(255, 193, 7, 0.18);
-
-              }
-
-
-
-              .hotel-ticket-badge:hover .hotel-ticket-icon {
-
-                transform: rotate(0deg) scale(1.08);
-
-              }
-
-
-
-              @media(max-width:576px) {
-
-
-
-                .hotel-ticket-badge {
-
-                  flex-direction: column;
-
-                  align-items: flex-start;
-
-                  padding: 20px;
-
-                  gap: 18px;
-
-                }
-
-
-
-                .hotel-ticket-right {
-
-                  width: 100%;
-
-                }
-
-
-
-                .hotel-ticket-btn {
-
-                  width: 100%;
-
-                  justify-content: center;
-
-                }
-
-
-
-                .hotel-ticket-content h3 {
-
-                  font-size: 21px;
-
-                }
-
-              }
-
-            </style>
-
-            
-
-            <a href="https://www.adotrip.com/#hotels" class="hotel-ticket-badge" target="_blank">
-
-
-
-              <div class="hotel-ticket-glow"></div>
-
-
-
-              <div class="hotel-ticket-left">
-
-
-
-                <div class="hotel-ticket-icon">
-
-                  <i style="font-size: 24px;" class="fa-solid fa-hotel"></i>
-
-                </div>
-
-
-
-                <div class="hotel-ticket-content">
-
-                  <h3>Book Hotels</h3>
-
-                  <p>
-
-                    Luxury stays, budget rooms &amp; exclusive travel deals
-
-                  </p>
-
-                </div>
-
-
-
+            <div class="pdp-f-contact-box">
+              <div class="pdp-fc-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
               </div>
-
-
-
-              <div class="hotel-ticket-right">
-
-
-
-
-
-
-
-                <div class="hotel-ticket-btn">
-
-                  Explore
-
-                  <i class="fa-solid fa-arrow-right"></i>
-
+              <div class="pdp-fc-text">
+                <span class="pdp-fc-label">Reservations</span>
+                <div class="pdp-fc-numbers">
+                  <a href="tel:+919311663765">+91-9311663765</a>
+                  <span class="pdp-fc-dot">•</span>
+                  <a href="tel:+919311663766">+91-9311663766</a>
                 </div>
-
-
-
               </div>
+            </div>
 
+            <div class="pdp-f-contact-box">
+              <div class="pdp-fc-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="pdp-fc-text">
+                <span class="pdp-fc-label">Guest Specialists</span>
+                <div class="pdp-fc-numbers">
+                  <a href="tel:+919560020687"><span>Monica:</span> +91-9560020687</a>
+                </div>
+                <div class="pdp-fc-numbers mt-1">
+                  <a href="tel:+01140108586"><span>Office:</span> +91-11 4010 8586</a>
+                </div>
+              </div>
+            </div>
 
+            <div class="pdp-f-contact-box">
+              <div class="pdp-fc-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="pdp-fc-text">
+                <span class="pdp-fc-label">Direct Inquiries</span>
+                <div class="pdp-fc-numbers">
+                  <a href="mailto:monica@adopremium.com">monica@adopremium.com</a>
+                  <span class="pdp-fc-dot">•</span>
+                  <a href="mailto:sales@adopremium.com">sales@adopremium.com</a>
+                </div>
+              </div>
+            </div>
 
+            <!-- WhatsApp Instant Concierge Button -->
+            <a href="https://api.whatsapp.com/send?phone=+919560020687&amp;text=Hi,%20Adopremium." target="_blank" rel="noopener" class="pdp-f-whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span>Chat with Concierge</span>
             </a>
 
-            
-
-            
-
-            
-          </ul>
-
-          <div style="display:none">
-
-                    <a href="https://www.adopremium.com/uk/">United Kingdom (UK)</a>
-
-                    <a href="https://www.adopremium.com/us/">United States (US)</a>
-
-                    <a href="https://www.adopremium.com/fr/">France (FR)</a>
-
-                    <a href="https://www.adopremium.com/de/">Germany (DE)</a>
-
-                    <a href="https://www.adopremium.com/ae/">United Arab Emirates (AE)</a>
-
-                    <a href="https://www.adopremium.com/id/">Indonesia (ID)</a>
-
-                    <a href="https://www.adopremium.com/it/">Italy (IT)</a>
-
-                    <a href="https://www.adopremium.com/jp/">Japan (JP)</a>
-
-                    <a href="https://www.adopremium.com/br/">Brazil (BR)</a>
-
-                    <a href="https://www.adopremium.com/ru/">Russia (RU)</a>
-
-                    <a href="https://www.adopremium.com/es/">Spain (ES)</a>
-
-                    <a href="https://www.adopremium.com/th/">Thailand (TH)</a>
-
-                    <a href="https://www.adopremium.com/tr/">Turkey (TR)</a></div>
-
+          </div>
         </div>
-
-      </div>
-
-      <div class="cs_footer_main_col">
-
-        <div class="cs_footer_widget">
-
-          <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color">Useful Links</h3>
-
-          <ul class="cs_menu_widget">
-
-            <li><a href="https://www.adopremium.com/">Home</a></li>
-
-            <li><a href="https://www.adopremium.com/about-us">About us</a></li>
-
-            <li><a href="https://www.adopremium.com/locations">Locations</a></li>
-
-            <li><a href="https://www.adopremium.com/villa-locations">Villa Locations</a></li>
-
-            <li><a href="https://www.adopremium.com/blog">Blogs</a></li>
-
-            <li><a href="https://www.adopremium.com/careers">Careers</a></li>
-
-            <!-- <li><a href="faq.php">FAQs</a></li> -->
-
-            <li><a href="https://www.adopremium.com/contact-us">Contact Us</a></li>
-
-            <li><a href="https://www.adopremium.com/privacy-policy">Privacy Policy</a></li>
-
-            <li><a href="https://www.adopremium.com/terms-conditions">Terms and Conditions</a></li>
-
-           <!-- <li><a href="javascript:void(0)" onclick="triggerPopupNow()">List Your Property</a></li> -->
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="cs_footer_main_col">
-
-        <div class="cs_footer_widget">
-
-          <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color">Locations</h3>
-
-          <ul class="cs_menu_widget">
-
-            
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/noida">NOIDA</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/delhi-ncr">DELHI</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/gurgaon">GURUGRAM (GURGAON)</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/mumbai">MUMBAI</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/pune">PUNE</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/hyderabad">HYDERABAD</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/chennai">CHENNAI</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/bangalore">BENGALURU (BANGALORE)</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/london">LONDON</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/singapore">SINGAPORE</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/dubai">DUBAI</a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/philippines">PHILIPPINES </a></li>
-
-                
-                <li style="text-transform: uppercase;"><a href="https://www.adopremium.com/locations/japan">JAPAN</a></li>
-
-                
-
-
-            <!-- <li><a href="locations.php">Mumbai</a></li>
-
-            <li><a href="locations.php">Pune</a></li>
-
-            <li><a href="locations.php">Hyderabad</a></li>
-
-            <li><a href="locations.php">Chennai</a></li>
-
-            <li><a href="locations.php">Bangalore</a></li> -->
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <div class="cs_footer_main_col">
-
-        <div class="cs_footer_widget">
-
-          <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color">Get In Touch with Our Expert</h3>
-
-          <ul class="cs_menu_widget">
-
-            <li class="mail">
-
-              <div class="mail-img">
-
-                <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/email.webp" loading="lazy" alt="Mail" title="Mail">
-
-              </div>
-
-              <div class="email">
-
-                <a href="mailto:monica@adopremium.com">monica@adopremium.com </a>
-
-                <a href="mailto:sales@adopremium.com">sales@adopremium.com </a>
-
-
-
-              </div>
-
-            </li>
-
-            <!--   
-
-                <li class="phone"><a href="tel:+91-9560020687"><img src="img/services/phone.png"> +91-9560020687</a>
-
-                  <a href="tel:+91-9560020687"><img src="img/services/phone.png"> +91-9560020687</a>
-
-                </li> -->
-
-
-
-            <li class="mail">
-
-              <div class="mail-img">
-
-                <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/phone.webp" loading="lazy" alt="Phone" title="Phone">
-
-              </div>
-
-              <div class="email">
-
-                <a href="tel:+91-9560020687">Monica: +91-9560020687 </a>
-
-                <a href="tel:+01140108586">+91-11 4010 8586 </a>
-
-              </div>
-
-            </li>
-
-
-
-
-
-            
-
-
-
-          </ul>
-
-
-
-            <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color mt-4">For Reservation</h3>
-
-            <ul class="cs_menu_widget">
-
-              <li class="mail">
-
-                <div class="mail-img">
-
-                  <img src="./Adopremium Service Apartment _ Short and Long Stays _ Fully Furnished_files/phone.webp" loading="lazy" alt="Phone" title="Phone">
-
-                </div>
-
-                <div class="email">
-
-                  <a href="tel:+91-9311663765">+91-9311663765 </a>
-
-                  <a href="tel:+91-9311663766">+91-9311663766 </a>
-
-                </div>
-
-              </li>
-
-             </ul> 
-
-             
-
-
-
-        </div>
-
       </div>
 
     </div>
 
-  </div>
-
-  <div class="container">
-
-    <div class="cs_footer_bottom" style="text-align: center;display: block;">
-
-      <div class="cs_copyright">Powered By <a href="https://www.adotrip.com/" target="_blank">Adotrip.com</a> All rights
-
-        reserved.</div>
-
-      <!-- <ul class="cs_menu_widget_2 cs_mp0">
-
-            <li><a href="#">Terms of Services</a></li>
-
-          </ul> -->
-
+    <!-- Minimal Clean Bottom Bar -->
+    <div class="pdp-footer-clean-bottom">
+      <div class="pdp-fcb-left">
+        <span>&copy; 2026 Adopremium Luxury Service Apartments | All rights reserved.</span>
+        <span class="pdp-fcb-sep">|</span>
+        <span>A Venture of <a href="https://www.adotrip.com/" target="_blank" rel="noopener">Adotrip.com</a></span>
+      </div>
     </div>
-
   </div>
-
 </footer>
+
+<style>
+/* ================= PREMIUM MINIMAL LIGHT GREY FOOTER (4 EQUAL COLS) ================= */
+.pdp-light-minimal-footer {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Watermark Overlay on Desktop (Bottom Left Corner, Soft White Glow Silhouette) */
+.pdp-footer-watermark-overlay {
+  position: absolute !important;
+  bottom: 0 !important;
+  left:30px !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 0 !important;
+  display: block !important;
+  line-height: 0 !important;
+  filter: invert(1);
+}
+.pdp-footer-watermark-overlay img {
+  width: 500px !important;
+  height: auto !important;
+  opacity: 0.05 !important;
+  /* Converts to crisp white stencil with clean drop silhouette */
+  filter: brightness(0) invert(1) drop-shadow(0 4px 18px rgba(0, 0, 0, 0.08)) !important;
+  pointer-events: none !important;
+  transform: translate(-10px, 10px) !important;
+}
+
+@media (max-width: 768px) {
+  .pdp-footer-watermark-overlay {
+    display: none !important;
+  }
+}
+
+
+.pdp-light-minimal-footer {
+  background: #f8f9fa !important;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  color: #334155 !important;
+  padding: 55px 0 25px !important;
+  font-family: inherit;
+  position: relative;
+}
+
+.pdp-footer-main-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr;
+  gap: 36px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pdp-f-split-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+.pdp-f-subcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-f-subcol-title {
+  font-size: 15px;
+  font-family: "Libre Baskerville", "Baskervville", "Baskerville", "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-weight: 500;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.pdp-f-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Brand Col */
+.pdp-f-logo-wrap img {
+  max-width: 170px;
+  height: auto;
+  margin-bottom: 16px;
+}
+.pdp-f-bio {
+  color: #64748b;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.pdp-f-social-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.pdp-f-social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.pdp-f-social-link:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* Clean Hotel Partner Ticket */
+.pdp-hotel-ticket-clean {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.88) 60%, rgba(255, 255, 255, 0.15) 100%),
+                    url('https://images.pexels.com/photos/1488327/pexels-photo-1488327.png?auto=compress&cs=tinysrgb&w=800');
+  background-size: auto 300px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: 1px solid #e7dfd5;
+  border-radius: 12px;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+.pdp-hotel-ticket-clean::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #c5a880;
+  opacity: 0.85;
+  transition: width 0.3s ease;
+  z-index: 2;
+}
+.pdp-hotel-ticket-clean:hover {
+  background-color: #0f172a;
+  background-image: linear-gradient(to right, #0f172a 0%, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(15, 23, 42, 0.15) 100%),
+                    url('https://images.pexels.com/photos/1488327/pexels-photo-1488327.png?auto=compress&cs=tinysrgb&w=800');
+  border-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+.pdp-hotel-ticket-clean:hover::before {
+  width: 5px;
+  background: #d4af37;
+}
+.pdp-ht-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #fbf8f3;
+  border: 1px solid #ebdccb;
+  color: #a67c52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.pdp-hotel-ticket-clean:hover .pdp-ht-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1d7a3;
+}
+.pdp-ht-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.pdp-ht-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a67c52;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+.pdp-hotel-ticket-clean:hover .pdp-ht-tag {
+  color: #d4af37;
+}
+.pdp-ht-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+.pdp-hotel-ticket-clean:hover .pdp-ht-title {
+  color: #ffffff;
+}
+.pdp-ht-arrow {
+  color: #cbd5e1;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.pdp-hotel-ticket-clean:hover .pdp-ht-arrow {
+  color: #f1d7a3;
+  transform: translate(2px, -2px);
+}
+
+/* Titles & Headers */
+.pdp-f-col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.pdp-f-col-title {
+  font-size: 17px;
+  font-family: "Libre Baskerville", "Baskervville", "Baskerville", "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-weight: 500;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.pdp-f-chevron {
+  display: none;
+  font-size: 13px;
+  color: #64748b;
+  transition: transform 0.3s ease;
+}
+
+/* Links List */
+.pdp-f-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.pdp-f-links-list li {
+  padding-left: 0;
+}
+.pdp-f-links-list li a, .pdp-f-dest-group li a {
+  color: #64748b;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.pdp-f-links-list li a:hover {
+  color: #0f172a;
+  padding-left: 3px;
+}
+
+/* Destination Pills */
+.pdp-f-dest-cat {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 7px;
+}
+.pdp-f-pills {
+  display: flex;
+  padding-left: 0;
+  flex-direction: column;
+  gap: 5px 6px;
+}
+.pdp-f-pills a:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Luxury Concierge Panel & Contact Boxes */
+.pdp-f-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e7dfd5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  position: relative;
+}
+.pdp-f-contact-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pdp-f-contact-box:last-child {
+  border-bottom: none;
+}
+
+.pdp-fc-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #a67c52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  margin-top: 1px;
+}
+
+
+.pdp-fc-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.pdp-fc-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #a67c52;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 3px;
+}
+
+.pdp-fc-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdp-fc-numbers a {
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pdp-fc-numbers a span {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.pdp-fc-numbers a:hover {
+  color: #a67c52;
+}
+
+.pdp-fc-dot {
+  color: #cbd5e1;
+  font-size: 10px;
+}
+
+/* Clean Bottom Bar */
+.pdp-footer-clean-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #64748b;
+  font-size: 12.5px;
+}
+.pdp-fcb-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pdp-fcb-left a {
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pdp-fcb-left a:hover {
+  text-decoration: underline;
+}
+.pdp-fcb-sep {
+  color: #cbd5e1;
+}
+.pdp-fcb-right {
+  display: flex;
+  gap: 8px;
+}
+.pdp-clean-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #475569;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+.pdp-clean-badge i {
+  color: #64748b;
+  font-size: 10.5px;
+}
+
+/* Responsive & Mobile Accordion */
+@media (max-width: 1199px) {
+  .pdp-footer-main-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pdp-light-minimal-footer {
+    padding: 35px 0 20px !important;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  .pdp-footer-main-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-bottom: 25px;
+  }
+  .pdp-f-brand-col {
+    padding-bottom: 22px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .pdp-f-accordion-col {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .pdp-f-col-header {
+    margin-bottom: 0;
+    padding: 16px 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .pdp-f-chevron {
+    display: block;
+  }
+  .pdp-f-col-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    opacity: 0;
+  }
+  .pdp-f-accordion-col.active .pdp-f-col-collapse {
+    max-height: 600px;
+    opacity: 1;
+    padding-bottom: 18px;
+  }
+  .pdp-f-accordion-col.active .pdp-f-chevron {
+    transform: rotate(180deg);
+    color: #0f172a;
+  }
+  .pdp-footer-clean-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 18px;
+  }
+  .pdp-fcb-left {
+    justify-content: center;
+  }
+  .pdp-fcb-right {
+    justify-content: center;
+  }
+}
+
+/* Desktop: accordion always open, no header toggle chrome */
+@media (min-width: 993px) {
+  .pdp-f-chevron { display: none !important; }
+  .pdp-f-col-collapse {
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+  }
+  .pdp-f-col-header {
+    cursor: default !important;
+    pointer-events: none;
+    margin-bottom: 18px;
+  }
+}
+
+/* WhatsApp inside Contact Panel */
+.pdp-f-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 10px 14px;
+  background: #25d366;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none !important;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
+  transition: all 0.25s ease;
+}
+
+.pdp-f-whatsapp-btn:hover {
+  background: #1eb855;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.pdp-f-whatsapp-btn i {
+  font-size: 17px;
+}
+
+/* Smooth fade hide for floating concierge */
+.pdp-floating-concierge-wrap {
+  transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
+}
+
+.pdp-floating-concierge-wrap.pdp-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(20px) !important;
+}
+
+/* Minimal Highlights Section Swiper & Responsive Fix */
+.pdp-minimal-highlights-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 576px) {
+  .pdp-minimal-highlights-swiper .pdp-minimal-highlights-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 28px !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  .pdp-minimal-highlights-swiper .swiper-slide {
+    width: auto !important;
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .pdp-minimal-highlights-swiper .pdp-minimal-highlights-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pdp-minimal-highlights-swiper {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  .pdp-minimal-highlights-swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+  }
+  .pdp-minimal-highlights-swiper .swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Guest Feedback Swiper Support */
+.guest-feedback-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 4px 2px 14px;
+}
+.guest-feedback-swiper .guest-feedback-list.swiper-wrapper {
+  display: flex !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  height: auto !important;
+}
+.guest-feedback-swiper .guest-feedback-card.swiper-slide {
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.pdp-reviews-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.pdp-reviews-pagination .swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.2s ease;
+}
+.pdp-reviews-pagination .swiper-pagination-bullet-active {
+  background: #0f172a;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* ========================================================
+   Redesigned PDP SEO Directory Accordion & Body (Max 500 Font)
+   ======================================================== */
+.pdp-seo-directory-section {
+  padding: 35px 0 20px;
+  background: transparent;
+}
+
+.pdp-seo-accordion-group {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s ease;
+}
+
+.pdp-seo-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.pdp-seo-accordion-header .pdp-sec-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.pdp-seo-accordion-body {
+  width: 100%;
+}
+
+/* SEO Accordion toggle button */
+.pdp-seo-accordion-toggle {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 12px;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+.pdp-seo-accordion-toggle:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+.pdp-seo-accordion-toggle i {
+  transition: transform 0.3s ease;
+}
+.pdp-seo-accordion-header.active .pdp-seo-accordion-toggle i {
+  transform: rotate(180deg);
+}
+
+.pdp-seo-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px 28px;
+}
+
+.pdp-seo-loc-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-seo-loc-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+  letter-spacing: 0.1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdp-seo-loc-title span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.pdp-seo-loc-title i {
+  color: #c5a880;
+  font-size: 12px;
+}
+
+.pdp-seo-loc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pdp-seo-loc-list li {
+  padding: 0;
+  margin: 0;
+}
+
+.pdp-seo-loc-list li a {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #64748b;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.pdp-seo-loc-list li a:hover {
+  color: #0f172a;
+  font-weight: 500;
+  transform: translateX(3px);
+}
+
+@media (max-width: 1199px) {
+  .pdp-seo-tags-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pdp-seo-accordion-group {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  .pdp-seo-tags-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+  /* Collapsed state on mobile — hidden by default */
+  .pdp-seo-accordion-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.35s ease;
+  }
+  .pdp-seo-accordion-body > .pdp-seo-tags-grid {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .pdp-seo-accordion-body.open {
+    grid-template-rows: 1fr;
+  }
+  /* Remove bottom border / margin from header when collapsed */
+  .pdp-seo-accordion-header:not(.active) {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .pdp-seo-tags-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile accordion toggle
+  const accordionHeaders = document.querySelectorAll('.pdp-f-accordion-col .pdp-f-col-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      if (window.innerWidth <= 992) {
+        const parentCol = this.closest('.pdp-f-accordion-col');
+        const isActive = parentCol.classList.contains('active');
+        
+        document.querySelectorAll('.pdp-f-accordion-col').forEach(col => {
+          if (col !== parentCol) col.classList.remove('active');
+        });
+        
+        parentCol.classList.toggle('active', !isActive);
+      }
+    });
+  });
+
+  // On resize to desktop (>992), reset all accordion active states
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 992) {
+      document.querySelectorAll('.pdp-f-accordion-col').forEach(col => {
+        col.classList.remove('active');
+      });
+    }
+  });
+
+  // Hide floating concierge when footer / contact desk is visible
+  const floatingConcierge = document.querySelector('.pdp-floating-concierge-wrap');
+  const footerElement = document.querySelector('.pdp-light-minimal-footer');
+
+  if (floatingConcierge && footerElement) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          floatingConcierge.classList.add('pdp-hidden');
+        } else {
+          floatingConcierge.classList.remove('pdp-hidden');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.05,
+      rootMargin: '0px 0px 50px 0px'
+    });
+
+    observer.observe(footerElement);
+  }
+
+  // Swiper for Minimal Highlights Section on Mobile (<576px)
+  let highlightsSwiper = null;
+  function initHighlightsSwiper() {
+    const swiperEl = document.querySelector('.pdp-minimal-highlights-swiper');
+    if (!swiperEl || typeof Swiper === 'undefined') return;
+
+    if (window.innerWidth < 576) {
+      if (!highlightsSwiper) {
+        highlightsSwiper = new Swiper('.pdp-minimal-highlights-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          speed: 800,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          allowTouchMove: true,
+        });
+      }
+    } else {
+      if (highlightsSwiper) {
+        highlightsSwiper.destroy(true, true);
+        highlightsSwiper = null;
+      }
+    }
+  }
+
+  initHighlightsSwiper();
+  window.addEventListener('resize', initHighlightsSwiper);
+
+  // Initialize Guest Feedback Reviews Swiper
+  if (document.querySelector('.guest-feedback-swiper') && typeof Swiper !== 'undefined') {
+    new Swiper('.guest-feedback-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      autoHeight: false,
+      speed: 600,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: '#guestReviewsNext',
+        prevEl: '#guestReviewsPrev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  // FAQ Accordion Toggle for #sec-faq-standalone
+  const faqQuestions = document.querySelectorAll('.pdp-faq-item .pdp-faq-q');
+  faqQuestions.forEach(q => {
+    q.addEventListener('click', function() {
+      const parentItem = this.closest('.pdp-faq-item');
+      const isAlreadyActive = parentItem.classList.contains('active');
+      
+      // Close all other FAQs in the list
+      document.querySelectorAll('.pdp-faq-item').forEach(item => {
+        if (item !== parentItem) {
+          item.classList.remove('active');
+        }
+      });
+
+      // Toggle current FAQ
+      parentItem.classList.toggle('active', !isAlreadyActive);
+    });
+  });
+
+  // SEO Directory Accordion Toggle (mobile only)
+  function initSeoAccordion() {
+    const seoHeaders = document.querySelectorAll('.pdp-seo-accordion-group .pdp-seo-accordion-header');
+    seoHeaders.forEach(header => {
+      // Set initial state: collapsed on mobile, open on desktop
+      const body = header.nextElementSibling;
+      if (!body) return;
+      if (window.innerWidth <= 768) {
+        header.classList.remove('active');
+        body.classList.remove('open');
+      } else {
+        header.classList.add('active');
+        body.classList.add('open');
+      }
+
+      // Remove old listener before adding fresh one
+      header._seoToggle && header.removeEventListener('click', header._seoToggle);
+      header._seoToggle = function() {
+        if (window.innerWidth > 768) return; // desktop: always open
+        const isOpen = body.classList.contains('open');
+        body.classList.toggle('open', !isOpen);
+        header.classList.toggle('active', !isOpen);
+      };
+      header.addEventListener('click', header._seoToggle);
+    });
+  }
+
+  initSeoAccordion();
+  window.addEventListener('resize', initSeoAccordion);
+});
+</script>
 
 
 
@@ -6063,89 +6737,26 @@ if (!landingUrl) {
 
 
 
-<!-- FLOATING BUTTONS WITH INLINE CSS -->
+<!-- LUXURY FLOATING CONCIERGE WIDGET (ICON ONLY + MAX Z-INDEX + TOOLTIP) -->
+<div class="pdp-floating-concierge-wrap">
+  <!-- WhatsApp VIP Chat -->
+  <a href="https://api.whatsapp.com/send?phone=+919560020687&amp;text=Hi,%20Adopremium." target="_blank" rel="noopener" class="pdp-floating-btn pdp-floating-whatsapp" aria-label="Chat on WhatsApp" data-tooltip="Chat on WhatsApp">
+    <div class="pdp-floating-pulse-ring pdp-pulse-green"></div>
+    <div class="pdp-floating-icon-box">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+    <span class="pdp-floating-online-dot"></span>
+  </a>
 
-<div style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; flex-direction: column; gap: 16px;">
-
-    
-
-    <a href="https://api.whatsapp.com/send?phone=+919560020687&amp;text=Hi,%20Adopremium." target="_blank" style="
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            padding: 9px 15px;
-
-            border-radius: 50px;
-
-            font-weight: 600;
-
-            font-size: 14px;
-
-            text-decoration: none;
-
-            color: #fff;
-
-            background: #25D366;
-
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
-
-            transform: scale(1);
-
-            transition: transform 0.2s;
-
-       " onmouseover="this.style.transform='translateY(-4px) scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-
-        <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
-
-        <span>Chat on WhatsApp</span>
-
-    </a>
-
-
-
-    <a href="tel:+919560020687" style="
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            padding: 9px 15px;
-
-            border-radius: 50px;
-
-            font-weight: 600;
-
-            font-size: 14px;
-
-            text-decoration: none;
-
-            color: #fff;
-
-            background: #1e1f3a;
-
-            border: 1px solid rgba(255,255,255,0.2);
-
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-
-            transform: scale(1);
-
-            transition: transform 0.2s;
-
-       " onmouseover="this.style.transform='translateY(-4px) scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-
-        <i class="fas fa-phone" style="font-size: 18px;"></i>
-
-        <span>Request a Callback</span>
-
-    </a>
-
+  <!-- Direct Callback -->
+  <a href="tel:+919560020687" class="pdp-floating-btn pdp-floating-call" aria-label="Request a Callback" data-tooltip="Request a Callback">
+    <div class="pdp-floating-pulse-ring pdp-pulse-gold"></div>
+    <div class="pdp-floating-icon-box">
+      <i class="fas fa-phone"></i>
+    </div>
+  </a>
 </div>
+
 
 <!-- End footer -->
 
